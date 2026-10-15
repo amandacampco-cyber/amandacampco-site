@@ -18,3 +18,21 @@ Private working list. Netlify is set to return a 404 for this file (see `netlify
 - [x] Contact form added (Netlify Forms). **Still to do in Netlify:** after the first deploy, open Forms and confirm "contact" appears, then Forms → Form notifications → add an email notification to amandacampco@gmail.com. Send yourself a test message.
 - [ ] Add a scheduling link (Cal.com or a Google appointment page) and link it beside the form.
 - [ ] Add a "starts at $X" line once pricing is set.
+
+
+## Proof log (collect this for every project, including paid pilots and in-house work)
+One row per project. Real numbers only; mark estimates as estimates. Get written permission before publishing.
+
+| Project | Date | Problem in one line | Before (hours/week, $/month, errors) | After | Who uses it weekly | AI cost per month (API, subscriptions) | Quote (with permission) | OK to publish? |
+|---|---|---|---|---|---|---|---|---|
+| Marketing Command Center | | | LinkedIn under 100 impressions/month | 13,431 impressions in May 2026 | | | | Employer said yes (2026-10-15) |
+| Card Controls | | | | 96% of 338 charges cleared automatically | | | | |
+| Onboarding with Claude | | | | 100+ hires, 53 offer letters in one week | | | | |
+| This website | | Needed a business site | | Brief to live site built with Claude | n/a | | | n/a |
+
+**Where to get the cost numbers:** the Anthropic Console usage page (spend by model and day), Claude Code's cost view for sessions, and subscription invoices. Record the month before and the month after any change that was meant to cut cost (cheaper model, shorter prompts, caching).
+
+## Website measurement plan
+Track weekly in one place (a simple sheet): visits, where they came from (LinkedIn, referral, direct), contact-form messages, calls booked, replies from outreach, calls that became paid work.
+Targets for the first two weeks after launch: send to 10 target owners and 3 fractional CFOs; success is 2 of 13 booking or replying with a real question.
+Add after launch: analytics on the site (Netlify Analytics needs no code), and a booking link.
