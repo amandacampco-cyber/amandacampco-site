@@ -4,9 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<!-- Site settings: paste the Umami website ID and the booking page URL here. Empty means off. -->
-<meta name="analytics-id" content="">
-<meta name="booking-url" content="">
+<!-- Site settings: Umami website ID (empty means analytics off). -->
+<meta name="analytics-id" content="07cb19a5-e61c-4868-af77-1ac9df4d7aee">
 <title>Amanda Camp &amp; Co | Practical AI for Small Business</title>
 <meta name="description" content="Amanda Camp &amp; Co helps small businesses use AI the right way: the right skills, the right prompts, and tools your team actually uses, without wasting money on tokens.">
 <meta property="og:title" content="Amanda Camp & Co">
@@ -284,7 +283,7 @@ dialog.lb button{all:unset;cursor:pointer;color:#fff;font:500 13px/1 var(--sans)
     <div>
       <p class="lede rv">AI that your team <em>actually uses,</em> and that pays for itself.</p>
       <p class="sub rv" style="--d:1">Most businesses don't fail at AI because it's hard. They fail because nobody showed them where it fits. I find where AI genuinely helps, set it up with the right skills and prompts, and train your team, without burning money on tokens or building tools that never get opened.</p>
-      <div class="cta rv" style="--d:2"><a class="btn dark" href="#contact" data-umami-event="cta-hero-contact">Book a free intro call <i>→</i></a><a class="btn line" href="#help" data-umami-event="cta-hero-how-i-help">How I help <i>→</i></a></div>
+      <div class="cta rv" style="--d:2"><a class="btn dark" href="#contact" data-umami-event="cta-hero-contact">Request a free intro call <i>→</i></a><a class="btn line" href="#help" data-umami-event="cta-hero-how-i-help">How I help <i>→</i></a></div>
     </div>
     <div class="me rv rv-r" style="--d:2">
       <span class="float f1" data-speed="-.06">Right skills</span>
@@ -393,9 +392,8 @@ dialog.lb button{all:unset;cursor:pointer;color:#fff;font:500 13px/1 var(--sans)
   <div class="cta-band rv rv-s" id="cband">
     <div class="copy">
       <h2>Let's find where AI <em>really helps.</em></h2>
-      <p>Tell me what's eating your week, or what you're paying for that isn't working. I'll reply within two business days with whether I can help and what a free intro call would cover.</p>
+      <p>Tell me what's eating your week, or what you're paying for that isn't working. I'll reply within two business days with whether I can help, and we'll find a time for a free intro call.</p>
       <p class="alt">Prefer email? <a href="mailto:amandacampco@gmail.com?subject=Amanda%20Camp%20%26%20Co%20inquiry" data-umami-event="email-click">amandacampco@gmail.com</a></p>
-      <p class="alt"><a class="btn light" id="bookbtn" href="#contact" target="_blank" rel="noopener" data-umami-event="booking-click" hidden>Book a time on my calendar <i>→</i></a></p>
     </div>
     <div>
       <form class="cform" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="cform">
@@ -411,6 +409,7 @@ dialog.lb button{all:unset;cursor:pointer;color:#fff;font:500 13px/1 var(--sans)
             <select name="team_size"><option value="">Choose one</option><option>Just me</option><option>2 to 10</option><option>11 to 50</option><option>51 to 100</option><option>100+</option></select>
           </label>
         </div>
+        <label><span>Best times to talk <em>(optional)</em></span><input type="text" name="best_time" placeholder="e.g. weekday mornings, Mountain Time"></label>
         <label>What's eating your week?<textarea name="message" required placeholder="For example: we pay for three AI tools and nobody uses them, or our onboarding is all manual."></textarea></label>
         <button type="submit" class="btn" data-umami-event="form-submit-click">Send message <i>→</i></button>
         <p class="note">I read every message myself and never share your details.</p>
@@ -433,13 +432,11 @@ dialog.lb button{all:unset;cursor:pointer;color:#fff;font:500 13px/1 var(--sans)
 (function(){
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // site settings: analytics (Umami, cookieless) and booking link, both off until configured in the head
+  // site settings: analytics (Umami, cookieless), off if the id is empty
   function meta(n){var m=document.querySelector('meta[name="'+n+'"]');return m?m.content.trim():''}
   var aid=meta('analytics-id');
   if(aid && navigator.doNotTrack!=='1'){var as=document.createElement('script');as.defer=true;as.src='https://cloud.umami.is/script.js';as.setAttribute('data-website-id',aid);document.head.appendChild(as)}
   function track(n){try{if(window.umami&&umami.track)umami.track(n)}catch(e){}}
-  var burl=meta('booking-url'),bb=document.getElementById('bookbtn');
-  if(burl&&bb){bb.href=burl;bb.hidden=false}
   var vd=document.getElementById('demo');if(vd){vd.addEventListener('volumechange',function(){if(!vd.muted)track('video-unmuted')},{once:true})}
   var sec={why:'section-problem',help:'section-how-i-help',built:'section-proof',about:'section-about',process:'section-process',contact:'section-contact'};
   if('IntersectionObserver' in window){var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){track(sec[e.target.id]);so.unobserve(e.target)}})},{threshold:.4});Object.keys(sec).forEach(function(id){var el=document.getElementById(id);if(el)so.observe(el)})}

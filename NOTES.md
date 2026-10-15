@@ -16,8 +16,8 @@ Private working list. Netlify is set to return a 404 for this file (see `netlify
 - [ ] Netlify: DNS verified, certificate issued, `amandacampco.com` primary.
 - [ ] Set up hello@amandacampco.com and swap it for the Gmail address.
 - [x] Contact form added (Netlify Forms). **Still to do in Netlify:** after the first deploy, open Forms and confirm "contact" appears, then Forms → Form notifications → add an email notification to amandacampco@gmail.com. Send yourself a test message.
-- [ ] **Booking link.** Create the page (Google Calendar: Create → Appointment schedule, or Cal.com), copy its public URL, paste it into `<meta name="booking-url" content="">` in `index.html` (or send it to Claude). A "Book a time on my calendar" button then appears beside the form. Suggested page: title "Free intro call: Amanda Camp & Co", 30 minutes, 15 minute buffer after, 24 hours minimum notice, ask one question: "What's eating your week, or what are you paying for that isn't working?"
-- [ ] **Analytics (free).** Umami Cloud Hobby plan (no cookies; free tier lists 1 site, 100K events a month, 6 months of history; confirm their terms allow business use). Sign up, add amandacampco.com, copy the Website ID, paste it into `<meta name="analytics-id" content="">` in `index.html` (or send it to Claude). Events already wired: section views, hero/nav/form/email/booking clicks, form sent, video unmuted. Visitors with Do Not Track on are not counted.
+- [x] Booking link: decided against it for now. The form collects "best times to talk" and replies set up the first calls by hand. Add a scheduling page later once your availability is settled.
+- [x] **Analytics (free):** Umami Cloud, website ID is in the `analytics-id` meta tag in `index.html`. Events wired: section views, hero/nav/form/email clicks, form sent, video unmuted. Visitors with Do Not Track on are not counted. Confirm the first visit shows in the Umami dashboard after the site is live. Check their terms allow business use on the free plan.
 - [ ] Add a "starts at $X" line once pricing is set.
 
 
@@ -36,4 +36,4 @@ One row per project. Real numbers only; mark estimates as estimates. Get written
 ## Website measurement plan
 Track weekly in one place (a simple sheet): visits, where they came from (LinkedIn, referral, direct), contact-form messages, calls booked, replies from outreach, calls that became paid work.
 Targets for the first two weeks after launch: send to 10 target owners and 3 fractional CFOs; success is 2 of 13 booking or replying with a real question.
-Add after launch: analytics on the site (Netlify Analytics needs no code), and a booking link.
+Analytics is on (Umami). No booking link yet; first calls are set up by reply.
