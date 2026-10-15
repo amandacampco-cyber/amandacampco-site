@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Amanda Camp &amp; Co | Systems, Automation &amp; AI for Small Business</title>
-<meta name="description" content="Amanda Camp &amp; Co builds the systems small companies run on: AI agents, internal tools, cash and payroll forecasting, onboarding and marketing.">
+<title>Amanda Camp &amp; Co | Practical AI for Small Business</title>
+<meta name="description" content="Amanda Camp &amp; Co helps small businesses use AI the right way: the right skills, the right prompts, and tools your team actually uses, without wasting money on tokens.">
 <meta property="og:title" content="Amanda Camp & Co">
-<meta property="og:description" content="I build the systems your business runs on.">
-<meta property="og:image" content="img/demo-poster.jpg">
+<meta property="og:description" content="Practical AI for small business. The right skills, the right prompts, tools that get used.">
+<meta property="og:image" content="img/poster.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
@@ -172,6 +172,23 @@ footer .row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;b
 footer b{font:400 20px/1 var(--display);letter-spacing:.04em;color:var(--ink);text-transform:uppercase}
 footer a{text-decoration:none;border-bottom:1px solid var(--line);transition:border-color .2s}footer a:hover{border-color:var(--ink)}
 
+/* ---------- problem / help ---------- */
+.pains{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pains div{border:1px solid var(--line);border-radius:16px;padding:28px 26px 30px;background:var(--paper);transition:transform .4s var(--ease),box-shadow .4s,border-color .3s}
+.pains div:hover{transform:translateY(-6px);border-color:var(--olive);box-shadow:0 22px 40px -26px rgba(22,19,15,.4)}
+.pains b{display:block;font:400 34px/1 var(--serif);color:var(--olive)}
+.pains h3{font:500 26px/1.1 var(--serif);margin:14px 0 8px}
+.pains p{font-size:15px;color:var(--muted);line-height:1.55}
+.turn{margin-top:30px;font:400 clamp(24px,3vw,34px)/1.2 var(--serif);max-width:30ch}
+.turn em{color:var(--olive)}
+.svc.four{grid-template-columns:repeat(4,1fr)}
+.svc small{display:block;margin-top:14px;font:500 11.5px/1.5 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--olive)}
+.where{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:26px;list-style:none;padding:0}
+.where li:first-child{font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.where li+li{border:1px solid var(--line);border-radius:999px;padding:8px 15px;font:500 12px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.ai .stage{margin-top:56px}
+.ai .agents{margin-top:44px}
+
 /* ---------- lightbox ---------- */
 dialog.lb{border:0;background:transparent;padding:0;max-width:min(1400px,94vw);max-height:92vh;overflow:visible}
 dialog.lb::backdrop{background:rgba(10,8,6,.88);backdrop-filter:blur(4px)}
@@ -194,7 +211,8 @@ dialog.lb button{all:unset;cursor:pointer;color:#fff;font:500 13px/1 var(--sans)
   .float{display:none}
   .band{grid-template-columns:1fr 1fr;row-gap:22px}
   .band div:nth-child(3){border-left:0}
-  .svc{grid-template-columns:1fr 1fr}
+  .svc,.svc.four{grid-template-columns:1fr 1fr}
+  .pains{grid-template-columns:1fr}
   .work,.agents{grid-template-columns:1fr}
   .gal{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr;gap:26px}.steps div{padding-right:0}
@@ -203,7 +221,7 @@ dialog.lb button{all:unset;cursor:pointer;color:#fff;font:500 13px/1 var(--sans)
   .ai{padding:56px 0 64px;border-radius:20px}
   .cta-band{padding:36px 26px}
 }
-@media(max-width:560px){.svc{grid-template-columns:1fr}.gal{grid-template-columns:1fr}.band b{font-size:36px}}
+@media(max-width:560px){.svc,.svc.four{grid-template-columns:1fr}.gal{grid-template-columns:1fr}.band b{font-size:36px}}
 @media(prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
   .hero h1 span{transform:none}
@@ -218,7 +236,7 @@ dialog.lb button{all:unset;cursor:pointer;color:#fff;font:500 13px/1 var(--sans)
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Amanda Camp and Co, home">AmandaCampCo</a>
     <nav aria-label="Main"><ul>
-      <li><a href="#about">Who I am</a></li><li><a href="#built">Built with AI</a></li><li><a href="#services">What I do</a></li><li><a href="#work">Work</a></li><li><a href="#process">Process</a></li>
+      <li><a href="#why">The problem</a></li><li><a href="#help">How I help</a></li><li><a href="#built">Proof</a></li><li><a href="#about">About</a></li><li><a href="#process">Process</a></li>
     </ul></nav>
     <a class="btn dark sm" href="#contact">Contact <i>→</i></a>
   </div>
@@ -226,19 +244,19 @@ dialog.lb button{all:unset;cursor:pointer;color:#fff;font:500 13px/1 var(--sans)
 
 <main id="top">
 <section class="hero wrap">
-  <div class="kicker">Systems · Automation · AI for small business</div>
+  <div class="kicker">Practical AI for small business</div>
   <h1 aria-label="AmandaCampCo" id="h1"></h1>
   <div class="hero-grid">
     <div>
-      <p class="lede rv">I build the systems your business runs on, so the work <em>stops depending on you</em> remembering it.</p>
-      <p class="sub rv" style="--d:1">Amanda Camp &amp; Co designs and builds AI automations, internal tools and finance and HR workflows for small and growing companies. I map the mess, build the fix, and get your team using it.</p>
-      <div class="cta rv" style="--d:2"><a class="btn dark" href="#contact">Book a free intro call <i>→</i></a><a class="btn line" href="#built">See what I build <i>→</i></a></div>
+      <p class="lede rv">AI that your team <em>actually uses,</em> and that pays for itself.</p>
+      <p class="sub rv" style="--d:1">Most businesses don't fail at AI because it's hard. They fail because nobody showed them where it fits. I find where AI genuinely helps, set it up with the right skills and prompts, and train your team, without burning money on tokens or building tools that never get opened.</p>
+      <div class="cta rv" style="--d:2"><a class="btn dark" href="#contact">Book a free intro call <i>→</i></a><a class="btn line" href="#help">How I help <i>→</i></a></div>
     </div>
     <div class="me rv rv-r" style="--d:2">
-      <span class="float f1" data-speed="-.06">AI agents</span>
-      <span class="float f2" data-speed=".05">Web apps</span>
-      <span class="float f3" data-speed="-.09">Automations</span>
-      <div class="badge" data-speed="-.04"><img src="img/headshot.jpg" alt="Amanda Cunningham" width="400" height="400"></div>
+      <span class="float f1" data-speed="-.06">Right skills</span>
+      <span class="float f2" data-speed=".05">Right prompts</span>
+      <span class="float f3" data-speed="-.09">Right-sized cost</span>
+      <div class="badge" data-speed="-.04"><img src="img/headshot.jpg" alt="Amanda Cunningham, founder of Amanda Camp and Co" width="400" height="400"></div>
       <small>Amanda Cunningham<br>Founder · Golden, Colorado</small>
     </div>
   </div>
@@ -251,70 +269,71 @@ dialog.lb button{all:unset;cursor:pointer;color:#fff;font:500 13px/1 var(--sans)
     <div><b data-count="96" data-suffix="%">96%</b><span>of 338 card charges cleared with no human chase</span></div>
     <div><b data-count="13">13</b><span>disconnected tools mapped in one AP audit</span></div>
   </div>
-  <p class="fine">Results from systems I built in-house at a Colorado manufacturer. Client results will replace these as projects finish.</p>
+  <p class="fine">Results from AI systems I built and run in-house at a Colorado manufacturer. Client results will replace these as projects finish.</p>
 </section>
 
-<section id="about" class="about wrap">
-  <h2 class="big rv">Hi, I'm Amanda. I turn <em>messy, manual work</em> into systems people actually use.</h2>
-  <div class="rv" style="--d:1">
-    <p>For six years I've been the person who makes a small, fast-moving company run: finance, hiring, vendors, marketing and the inbox. Most recently I built the finance, marketing and HR systems for a Colorado modular home manufacturer, working directly with the CEO.</p>
-    <p>That's the job I do for other businesses now. I don't hand you a report and leave. I build the tool, teach your team to use it, and check that it worked.</p>
-    <ul class="chips"><li>6+ years in operations</li><li>MBA candidate, MSU Denver</li><li>English &amp; Portuguese</li><li>Claude · Supabase · Vercel · QuickBooks</li></ul>
+<section id="why" class="sect wrap">
+  <h2 class="sec rv">Why most AI spending doesn't pay off</h2>
+  <div class="pains">
+    <div class="rv"><b>01</b><h3>Tokens add up quietly</h3><p>The biggest model gets used for small jobs, prompts are bloated and nobody sets limits. The bill grows and the results don't.</p></div>
+    <div class="rv" style="--d:1"><b>02</b><h3>Tools nobody opens</h3><p>Someone builds something impressive that doesn't fit how the team works. A month later it sits unused.</p></div>
+    <div class="rv" style="--d:2"><b>03</b><h3>Prompts that don't work twice</h3><p>Everyone types their own. Results vary, nothing is reusable, and no one knows what a good answer looks like.</p></div>
   </div>
+  <p class="turn rv">I fix all three, and I'll tell you when <em>AI isn't the answer.</em></p>
+</section>
+
+<section id="help" class="sect wrap">
+  <h2 class="sec rv">How I help</h2>
+  <ul class="svc four">
+    <li class="rv"><i>1</i><b>Find where AI fits</b><span>I map how your week really runs, then mark what AI should do, what people should, and what to stop paying for.</span><small>The AI audit</small></li>
+    <li class="rv" style="--d:1"><i>2</i><b>Set up the right skills &amp; prompts</b><span>Reusable Claude skills and prompt libraries written for your business, so anyone on your team gets the same good result.</span><small>Skills &amp; prompts</small></li>
+    <li class="rv" style="--d:2"><i>3</i><b>Build only what earns its place</b><span>A simple tool or automation, only if the audit says it's worth it. Right-sized models and cost limits built in.</span><small>Tools &amp; automation</small></li>
+    <li class="rv" style="--d:3"><i>4</i><b>Train your team, then check</b><span>A walkthrough, a one-page guide, and a 30-day review of what's used and what it costs.</span><small>Adoption &amp; cost</small></li>
+  </ul>
+  <ul class="where rv"><li>Where it works</li><li>Finance</li><li>HR &amp; onboarding</li><li>Marketing</li><li>Operations</li><li>Executive support</li></ul>
 </section>
 
 <section id="built" class="ai" aria-labelledby="ai-h">
   <div class="ai-in">
-    <span class="tag rv">Built with AI</span>
-    <h2 id="ai-h" class="rv" style="--d:1">An AI marketing team, <em>built and running.</em></h2>
-    <p class="lead rv" style="--d:2">The Marketing Command Center is ten AI agents and a ten-module web app that find ideas, write copy, make graphics, research grants and publish, with a human approval step before anything goes out. I designed it, built it and run it.</p>
+    <span class="tag rv">Proof, not theory</span>
+    <h2 id="ai-h" class="rv" style="--d:1">I run on this <em>every day.</em></h2>
+    <p class="lead rv" style="--d:2">I built an AI marketing team for a company with no marketing department. Ten AI agents find ideas, write copy, make graphics and research grants. A person reviews everything before it goes out. LinkedIn went from under 100 impressions a month to over 13,000.</p>
 
     <div class="stage rv rv-s">
-      <figure class="back l" data-speed="-.12"><img src="img/studio.jpg" alt="Image Studio module generating a social graphic" loading="lazy" width="1456" height="827"></figure>
-      <figure class="back r" data-speed=".1"><img src="img/opps.jpg" alt="Opportunities board tracking grants, awards and conferences" loading="lazy" width="1456" height="827"></figure>
       <div class="frame" id="frame">
-        <div class="bar"><i></i><i></i><i></i><span>Marketing Command Center · live tool</span></div>
-        <video id="demo" controls muted loop playsinline preload="metadata" poster="img/demo-poster.jpg" aria-label="Demo of the Marketing Command Center answering a question from live marketing data">
+        <div class="bar"><i></i><i></i><i></i><span>Marketing Command Center · 41-second demo</span></div>
+        <video id="demo" controls muted loop playsinline preload="metadata" poster="img/poster.jpg" aria-label="Demo of the Marketing Command Center answering a question from live marketing data">
           <source src="command-center-demo.mp4" type="video/mp4">
         </video>
       </div>
-      <p class="cap">41-second demo of the real tool. Some details are blurred.</p>
+      <p class="cap">The real tool answering a question from live data. Some details are blurred.</p>
     </div>
 
     <div class="agents">
-      <div class="rv"><b>01</b><h3>Find</h3><p>Agents surface post ideas, industry news, competitors, grants and conferences worth pursuing.</p></div>
-      <div class="rv" style="--d:1"><b>02</b><h3>Make</h3><p>Agents draft copy and generate on-brand graphics, sized for each channel.</p></div>
-      <div class="rv" style="--d:2"><b>03</b><h3>Approve &amp; publish</h3><p>Agents draft, a person reviews, the CEO approves, then it posts. Nothing ships unreviewed.</p></div>
-    </div>
-
-    <div class="gal" role="list">
-      <button type="button" class="rv" role="listitem" data-full="img/home.jpg" data-cap="Home: everything that needs attention, with an AI briefing"><img src="img/home.jpg" alt="Command Center home screen" loading="lazy"><span>Home</span></button>
-      <button type="button" class="rv" style="--d:1" role="listitem" data-full="img/askai.jpg" data-cap="Ask AI: answers a question from live marketing data"><img src="img/askai.jpg" alt="Ask AI panel answering a question" loading="lazy"><span>Ask AI</span></button>
-      <button type="button" class="rv" style="--d:2" role="listitem" data-full="img/insights.jpg" data-cap="AI Insights: a daily market brief and competitor watch"><img src="img/insights.jpg" alt="AI Insights market brief" loading="lazy"><span>AI Insights</span></button>
-      <button type="button" class="rv" style="--d:3" role="listitem" data-full="img/studio.jpg" data-cap="Image Studio: on-brand graphics in the right size for each channel"><img src="img/studio.jpg" alt="Image Studio" loading="lazy"><span>Image Studio</span></button>
+      <div class="rv"><b>01</b><h3>It finds</h3><p>Ideas, news, competitors and grants worth pursuing.</p></div>
+      <div class="rv" style="--d:1"><b>02</b><h3>It drafts</h3><p>Copy and on-brand graphics, ready for review.</p></div>
+      <div class="rv" style="--d:2"><b>03</b><h3>A person approves</h3><p>Nothing ships unreviewed. AI does the legwork, people make the calls.</p></div>
     </div>
   </div>
 </section>
 
-<section id="services" class="sect wrap">
-  <h2 class="sec rv">What I can do for you</h2>
-  <ul class="svc">
-    <li class="rv"><i>1</i><b>AI &amp; automation</b><span>Agents and scheduled workflows that draft, check and chase.</span></li>
-    <li class="rv" style="--d:1"><i>2</i><b>Internal tools</b><span>Simple web apps and dashboards your team will actually open.</span></li>
-    <li class="rv" style="--d:2"><i>3</i><b>Finance operations</b><span>Cash forecasts, payroll planning, AP approvals and controls.</span></li>
-    <li class="rv" style="--d:3"><i>4</i><b>Onboarding &amp; HR</b><span>Bilingual hiring workflows from offer letter to day one.</span></li>
-    <li class="rv" style="--d:4"><i>5</i><b>Marketing systems</b><span>Content pipelines, approvals and reporting that run without a team.</span></li>
-  </ul>
+<section id="work" class="sect wrap">
+  <h2 class="sec rv">More things I've built that got used</h2>
+  <div class="work">
+    <article class="card rv"><div class="shot"><img src="img/cashflow.jpg" alt="13-week cash forecast with balance line and weekly grid, sample data" loading="lazy" width="1920" height="1200"></div><h3>Know when cash runs short</h3><p>A 13-week forecast. Drag a bill to another week and the balance updates. The CEO used it to decide what to pay and when.</p></article>
+    <article class="card rv" style="--d:1"><div class="shot"><img src="img/spend-tx.jpg" alt="Company card controls showing flagged charges, sample data" loading="lazy" width="1440" height="900"></div><h3>Catch overspending in minutes</h3><p>Over-limit card charges get a question in Slack, and receipts are matched automatically.</p></article>
+    <article class="card text rv" style="--d:2"><div class="shot"><ol>
+      <li><b>1</b>Hire details in one form</li><li><b>2</b>Claude fills the offer letter</li><li><b>3</b>Welcome email, English &amp; Spanish</li><li><b>4</b>Payroll setup prepared</li><li><b>5</b>Reminders sent automatically</li>
+    </ol></div><h3>Onboard 100+ hires without chasing</h3><p>53 offer letters in one week, each person emailed in their own language.</p></article>
+  </div>
 </section>
 
-<section id="work" class="sect wrap">
-  <h2 class="sec rv">More selected work</h2>
-  <div class="work">
-    <article class="card rv"><div class="shot"><img src="img/cashflow.jpg" alt="13-week cash forecast with balance line and weekly grid, sample data" loading="lazy" width="1920" height="1200"></div><h3>13-Week Cash Forecast</h3><p>Drag a bill to another week and the balance and warnings update. The CEO used it to decide what to pay and when.</p></article>
-    <article class="card rv" style="--d:1"><div class="shot"><img src="img/spend-tx.jpg" alt="Company card controls showing flagged charges, sample data" loading="lazy" width="1440" height="900"></div><h3>Card Controls</h3><p>Over-limit charges get a question in Slack, replies flow back in, and receipt photos are matched automatically.</p></article>
-    <article class="card text rv" style="--d:2"><div class="shot"><ol>
-      <li><b>1</b>Hire details in one form</li><li><b>2</b>Claude fills the offer letter</li><li><b>3</b>Welcome email, English &amp; Spanish</li><li><b>4</b>Payroll setup block prepared</li><li><b>5</b>Inbox watched, reminders sent</li>
-    </ol></div><h3>Onboarding with Claude</h3><p>100+ hires onboarded, including 53 offer letters in one week, each person emailed in their language.</p></article>
+<section id="about" class="about wrap sect" style="padding-top:104px">
+  <h2 class="big rv">Hi, I'm Amanda. I help people use AI <em>on purpose.</em></h2>
+  <div class="rv" style="--d:1">
+    <p>For six years I've been the person who makes a small, fast-moving company run: finance, hiring, vendors, marketing and the inbox. Most recently I built the finance, marketing and HR systems for a Colorado modular home manufacturer, working directly with the CEO.</p>
+    <p>I've learned what makes AI worth paying for, and what doesn't. Amanda Camp &amp; Co is how I do that for other businesses: I find the real use, build it, teach your team, and check that it worked.</p>
+    <ul class="chips"><li>6+ years in operations</li><li>MBA candidate, MSU Denver</li><li>English &amp; Portuguese</li><li>Claude · Supabase · Vercel · QuickBooks</li></ul>
   </div>
 </section>
 
@@ -322,22 +341,22 @@ dialog.lb button{all:unset;cursor:pointer;color:#fff;font:500 13px/1 var(--sans)
   <h2 class="sec rv">How a project runs</h2>
   <div class="steps rv" id="steps">
     <div><b>01</b><h4>Listen</h4><p>Where does time and money leak? We pick one thing to fix first.</p></div>
-    <div><b>02</b><h4>Map</h4><p>I document how the work really happens, tools and workarounds included.</p></div>
-    <div><b>03</b><h4>Build</h4><p>A working version fast, in tools you already pay for when possible.</p></div>
+    <div><b>02</b><h4>Audit</h4><p>I map how the work really happens and where AI would genuinely help.</p></div>
+    <div><b>03</b><h4>Build</h4><p>Skills, prompts or a tool, in software you already pay for when possible.</p></div>
     <div><b>04</b><h4>Train</h4><p>Your team gets a walkthrough and a one-page guide. No mystery boxes.</p></div>
-    <div><b>05</b><h4>Measure</h4><p>We check the numbers after 30 days and fix what isn't working.</p></div>
+    <div><b>05</b><h4>Measure</h4><p>After 30 days we check use and cost, and fix what isn't working.</p></div>
   </div>
 </section>
 
 <section class="sect wrap fit" aria-label="Who this is for">
-  <div class="rv"><h3>A good fit if <em>you…</em></h3><ul><li>Run a 5 to 100 person company with no ops or IT team</li><li>Have spreadsheets, inboxes and Slack doing a system's job</li><li>Want something built and handed over, not a retainer forever</li></ul></div>
-  <div class="rv" style="--d:1"><h3>Probably not if <em>you…</em></h3><ul><li>Need custom enterprise software or a large dev team</li><li>Want a logo, brand identity or a marketing agency</li><li>Aren't ready to change how the work gets done</li></ul></div>
+  <div class="rv"><h3>A good fit if <em>you…</em></h3><ul><li>Run a 5 to 100 person company with no ops or IT team</li><li>Are paying for AI tools and not sure they're helping</li><li>Want something built and handed over, not a retainer forever</li></ul></div>
+  <div class="rv" style="--d:1"><h3>Probably not if <em>you…</em></h3><ul><li>Want AI added everywhere for its own sake</li><li>Need custom enterprise software or a large dev team</li><li>Aren't ready to change how the work gets done</li></ul></div>
 </section>
 
 <section id="contact" class="sect wrap">
   <div class="cta-band rv rv-s">
-    <h2>Let's fix one thing <em>properly.</em></h2>
-    <p>Tell me what's eating your week. I'll reply within two business days with whether I can help and what it would take.</p>
+    <h2>Let's find where AI <em>really helps.</em></h2>
+    <p>Tell me what's eating your week, or what you're paying for that isn't working. I'll reply within two business days with whether I can help and what it would take.</p>
     <a class="btn light" href="mailto:amandacampco@gmail.com?subject=Amanda%20Camp%20%26%20Co%20inquiry">Get in touch <i>→</i></a>
   </div>
 </section>
