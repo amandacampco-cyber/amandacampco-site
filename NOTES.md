@@ -37,3 +37,12 @@ One row per project. Real numbers only; mark estimates as estimates. Get written
 Track weekly in one place (a simple sheet): visits, where they came from (LinkedIn, referral, direct), contact-form messages, calls booked, replies from outreach, calls that became paid work.
 Targets for the first two weeks after launch: send to 10 target owners and 3 fractional CFOs; success is 2 of 13 booking or replying with a real question.
 Analytics is on (Umami). No booking link yet; first calls are set up by reply.
+
+
+## Brand system: "The Sunday Edition" direction (set 2026-10-15)
+Cozy, modern, newspaper-inspired. Editorial, warm, trustworthy, practical. Not a 1920s newspaper, and not the glowing blue/purple look most AI consultancies use.
+- **Colors:** paper cream `#F6EFE4`, ink `#1F1E1A`, olive `#6B7058`, taupe `#B7A899`, rust `#B75E46` (buttons use the slightly darker `#A4503A` for contrast), stone `#DAD4C8`.
+- **Type:** Newsreader (headlines, body, italic accents) and Figtree (small uppercase labels, buttons, nav).
+- **Devices:** masthead with dateline and double rule, numbered section labels ("01 /"), column rules instead of boxed cards, "Fig. 1" captions, "Editor's note", boxed "Case study" tags, circular AC seal.
+- **Photography (still needed):** warm, muted, natural light, breathing room, a personal feel (desk, books, coffee, plants, Colorado light). Avoid AI-generated stock images. Real photos of your workspace beat anything generated, and the headshot needs a larger, uncropped version.
+- **Open positioning question:** stay focused on "AI that gets used" (current), or broaden to "better systems" with websites, dashboards and operations as services. Current choice: AI-enabled business improvement is the central idea; add dedicated service pages later.
