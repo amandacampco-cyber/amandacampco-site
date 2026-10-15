@@ -46,3 +46,29 @@ Cozy, modern, newspaper-inspired. Editorial, warm, trustworthy, practical. Not a
 - **Devices:** masthead with dateline and double rule, numbered section labels ("01 /"), column rules instead of boxed cards, "Fig. 1" captions, "Editor's note", boxed "Case study" tags, circular AC seal.
 - **Photography (still needed):** warm, muted, natural light, breathing room, a personal feel (desk, books, coffee, plants, Colorado light). Avoid AI-generated stock images. Real photos of your workspace beat anything generated, and the headshot needs a larger, uncropped version.
 - **Open positioning question:** stay focused on "AI that gets used" (current), or broaden to "better systems" with websites, dashboards and operations as services. Current choice: AI-enabled business improvement is the central idea; add dedicated service pages later.
+
+## Client hosting policy (set 2026-10-15)
+**Rule: never run live client sites on your free personal Netlify account.** Credits are shared per account. If the pool runs out, every site on it is paused at once, clients included.
+
+**Default: the client owns their hosting.**
+1. The client creates their own Netlify account (free plan fits most small sites). Check Netlify's terms on commercial use first.
+2. The site's code lives in a GitHub repo that you transfer to them or keep under their organization, with you added as a collaborator for maintenance.
+3. The client's domain DNS points at their Netlify site (A record `75.2.60.5` for the bare domain, CNAME for `www`; use whatever values Netlify shows).
+4. You hand over admin access and a one-page "how to edit and publish" guide.
+
+**Optional: managed hosting (a "site care plan").** You host on a paid plan and bill a monthly fee that covers it, plus updates, backups and a monthly check. Netlify Personal is $9 a month for 1,000 credits and Pro is $20 a month for 3,000 credits with unlimited members; credit packs are $5 per 500 on Personal and $10 per 1,500 on Pro. Move to Pro once you manage three or more sites. **Set the care-plan price so it clearly covers the plan cost.** (Price: to be decided.)
+
+**Credit math (Netlify credit-based plans):** production deploy 15 credits, bandwidth 20 per GB, web requests 2 per 10,000, form submissions free, deploy previews and branch deploys 0. So 300 credits is about 20 deploys in total, 1,000 is about 66, 3,000 is about 200.
+
+**Habits that save credits on every site**
+- Batch changes. One release is one production deploy.
+- Test on branch deploys or deploy previews (0 credits), then publish once.
+- Host large videos on YouTube (unlisted) or Vimeo and embed them.
+- Add `[skip ci]` to commits that change only notes, so they do not trigger a deploy.
+
+**Proposal wording (copy and adjust)**
+> *Hosting and domain.* Your website is hosted on a Netlify account that you own. For most small sites this costs $0 a month on Netlify's free plan; busier sites may need a paid plan. Your domain renews with your registrar each year. I set everything up, hand you full access and a short guide, and you stay in control.
+>
+> *Optional site care plan: $___ per month.* I host your site, apply updates, keep backups and check performance monthly, so you never have to manage it.
+
+**To decide:** care-plan price; which Netlify plan you will manage client sites on; whether the first client pilot is free or discounted in exchange for a quote and results.
