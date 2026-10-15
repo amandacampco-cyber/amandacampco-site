@@ -72,3 +72,33 @@ Cozy, modern, newspaper-inspired. Editorial, warm, trustworthy, practical. Not a
 > *Optional site care plan: $___ per month.* I host your site, apply updates, keep backups and check performance monthly, so you never have to manage it.
 
 **To decide:** care-plan price; which Netlify plan you will manage client sites on; whether the first client pilot is free or discounted in exchange for a quote and results.
+
+## Security baseline (set 2026-10-15): for this site and every client site
+A static site (plain HTML on Netlify) has no database, no logins on the page and no plugins, so classic malware is rare. The real risks are **account takeover, form spam, fake email from your domain, DNS/domain hijack, and third-party scripts.**
+
+**Already done on this site (netlify.toml)**
+- Security headers: Content-Security-Policy (only your own files, Google Fonts and Umami can load), no framing by other sites, no content-type sniffing, strict referrer policy, camera/microphone/location blocked, HTTPS enforced by Netlify.
+- Contact form: hidden honeypot field. Netlify Forms also filters spam on its side (check the Forms tab for a "Spam" list; confirm current options in Netlify).
+- Private notes are hidden from the public site; no secrets are stored in the repo.
+- Cookieless analytics, off for visitors with Do Not Track.
+
+**Your checklist (accounts are the biggest risk)**
+- [ ] Turn on two-step verification, ideally passkeys, for: Netlify, GitHub, Spaceship (domain registrar), Google, Umami. Use a password manager, unique passwords.
+- [ ] Spaceship: confirm the domain's transfer lock is on and auto-renew is on (auto-renew already shows On). Consider enabling DNSSEC if offered for your DNS setup.
+- [ ] Netlify: check Team members and remove anyone who should not have access; never share one login. Keep deploy tokens and API keys out of the repo.
+- [ ] GitHub: keep repos private; turn on secret scanning if offered; require 2FA for anyone you add.
+- [ ] Form spam: if junk appears, turn on reCAPTCHA in Netlify's form settings (adds a Google script, so update the CSP in netlify.toml), or add a short time-delay check.
+- [ ] Email from your domain (when hello@amandacampco.com exists): set up SPF and DKIM as your email provider instructs, then add a DMARC record in Spaceship DNS: TXT, host `_dmarc`, value `v=DMARC1; p=none; rua=mailto:amandacampco@gmail.com` to start, tighten to `p=quarantine` after a few weeks. Until you send email from the domain, a stricter alternative is TXT `@` = `v=spf1 -all` and `_dmarc` = `v=DMARC1; p=reject;`, which stops others faking your address.
+- [ ] Monitoring: free uptime check (for example UptimeRobot) on both domains, and Google Search Console (it warns about hacked content). Look at Netlify's Deploys list monthly for deploys you did not make.
+- [ ] Backups: GitHub holds the full site history and Netlify keeps old deploys. Note where each client's repo and domain login live.
+
+**For client sites (add to every project)**
+1. Client owns the Netlify, GitHub and domain accounts, each with two-step verification on. You get named collaborator access, not their password.
+2. Start from this site's `netlify.toml` headers. Edit the Content-Security-Policy to match only the scripts that site really uses; test after changing it.
+3. Forms: honeypot on every form, Netlify's spam filtering, add reCAPTCHA if spam shows up.
+4. Prefer plain static sites for brochure and lead-generation pages. If a client needs WordPress or a similar CMS, that is where malware lives: use a managed host, automatic updates, few plugins, a security plugin, limited admin users, and offsite backups, and price it into a care plan.
+5. Keep third-party scripts to a minimum and list each one in the handoff doc.
+6. Email authentication (SPF, DKIM, DMARC) for the client's domain, and a monthly check of uptime, forms and deploys inside any care plan.
+7. Put "how we handle security" in the proposal and handoff guide so clients see it as part of the value.
+
+**What no headline setting can fix:** a stolen password or a phished login. That is why two-step verification comes first.
