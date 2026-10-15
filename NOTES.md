@@ -16,7 +16,8 @@ Private working list. Netlify is set to return a 404 for this file (see `netlify
 - [ ] Netlify: DNS verified, certificate issued, `amandacampco.com` primary.
 - [ ] Set up hello@amandacampco.com and swap it for the Gmail address.
 - [x] Contact form added (Netlify Forms). **Still to do in Netlify:** after the first deploy, open Forms and confirm "contact" appears, then Forms → Form notifications → add an email notification to amandacampco@gmail.com. Send yourself a test message.
-- [ ] Add a scheduling link (Cal.com or a Google appointment page) and link it beside the form.
+- [ ] **Booking link.** Create the page (Google Calendar: Create → Appointment schedule, or Cal.com), copy its public URL, paste it into `<meta name="booking-url" content="">` in `index.html` (or send it to Claude). A "Book a time on my calendar" button then appears beside the form. Suggested page: title "Free intro call: Amanda Camp & Co", 30 minutes, 15 minute buffer after, 24 hours minimum notice, ask one question: "What's eating your week, or what are you paying for that isn't working?"
+- [ ] **Analytics (free).** Umami Cloud Hobby plan (no cookies; free tier lists 1 site, 100K events a month, 6 months of history; confirm their terms allow business use). Sign up, add amandacampco.com, copy the Website ID, paste it into `<meta name="analytics-id" content="">` in `index.html` (or send it to Claude). Events already wired: section views, hero/nav/form/email/booking clicks, form sent, video unmuted. Visitors with Do Not Track on are not counted.
 - [ ] Add a "starts at $X" line once pricing is set.
 
 
